@@ -1,18 +1,18 @@
-# Todo CLI
+# Todo OIO
 
 A modern, intuitive command-line todo application built with Python. Features beautiful terminal UI, priority levels, due dates, and more.
 
 ## Installation
 
-Install from PyPI (coming soon):
+Install from PyPI:
 ```bash
-pip install todo-cli
+pip install todo-oio
 ```
 
 Or install from source:
 ```bash
-git clone <repository-url>
-cd todo-cli
+git clone https://github.com/todo-oio/todo-oio.git
+cd todo-oio
 pip install -e .
 ```
 
@@ -68,20 +68,21 @@ todo delete 1                      # Delete task (with confirmation)
 
 ## Features
 
-- 🎨 **Beautiful terminal UI** with colors and emojis
-- 📅 **Due dates** with flexible parsing (today, tomorrow, YYYY-MM-DD, etc.)
-- 🔥 **Priority levels** (low, medium, high)
-- 📊 **Status tracking** (pending, completed)
-- 🔍 **Filtering and sorting** options
-- 💾 **JSON storage** in your home directory
-- ⚡ **Interactive editing** with confirmation prompts
-- 🚨 **Overdue detection** with visual indicators
+- **Beautiful terminal UI** with colors and clean formatting
+- **Due dates** with flexible parsing (today, tomorrow, YYYY-MM-DD, etc.)
+- **Priority levels** (low, medium, high)
+- **Status tracking** (pending, completed)
+- **Filtering and sorting** options
+- **JSON storage** in your home directory
+- **Interactive editing** with confirmation prompts
+- **Overdue detection** with visual indicators
+- **Individual todo details** with `todo show` command
 
 ## Priority Levels
 
-- 🔴 **High**: Critical tasks that need immediate attention
-- 🟡 **Medium**: Important tasks with normal priority (default)
-- 🟢 **Low**: Tasks that can be done when time permits
+- **High**: Critical tasks that need immediate attention
+- **Medium**: Important tasks with normal priority (default)
+- **Low**: Tasks that can be done when time permits
 
 ## Due Date Formats
 
@@ -116,6 +117,23 @@ todo edit 2                             # Edit second task
 todo delete 3                           # Delete third task
 ```
 
+## Command Reference
+
+### Core Commands
+- `todo init` - Initialize a new todo list
+- `todo add <task>` - Add a new todo item
+- `todo list` - Show all todos
+- `todo show <id>` - Show detailed todo information
+- `todo complete <id>` - Mark todo as completed
+- `todo edit <id>` - Edit todo interactively
+- `todo delete <id>` - Delete todo with confirmation
+
+### Options
+- `--priority` / `-p` - Set priority (low, medium, high)
+- `--due` / `-d` - Set due date
+- `--status` / `-s` - Filter by status (pending, completed, all)
+- `--sort` - Sort by (created, priority, due)
+
 ## Development
 
 This project uses modern Python tooling:
@@ -125,6 +143,10 @@ This project uses modern Python tooling:
 - **Testing**: pytest
 - **Code Quality**: black, isort, flake8, mypy
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## License
 
-MIT License
+MIT License - see the [LICENSE](LICENSE) file for details.
